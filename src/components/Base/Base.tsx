@@ -1,5 +1,5 @@
 import "./Base.css";
-import { LinkPreview } from '@dhaiwat10/react-link-preview';
+// import { LinkPreview } from '@dhaiwat10/react-link-preview';
 
 type DataType = {
   name: string;
@@ -23,7 +23,7 @@ export const Base = ({ data }: BaseProps): JSX.Element => {
                 stock.map((item) => (
                   <li key={item}>
                     <div className="preview">
-                    <LinkPreview url={item} width='100px' />
+                    {/* <LinkPreview url={item} width='100px' /> */}
                     </div>
                     <a href={item} target="_blank" rel="noreferrer">{item}</a>
                   </li>
