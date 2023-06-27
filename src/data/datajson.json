@@ -1,5 +1,15 @@
 [
   {
+    "name": "stock",
+    "stock": [
+      "https://www.stocksy.com/",
+      "https://www.westend61.de/",
+      "https://www.gettyimages.com/",
+      "https://www.plainpicture.com/",
+      "https://peopleimages.com/"
+    ]
+  },
+  {
     "name": "main stock",
     "stock": [
       "https://submit.shutterstock.com/ru/dashboard",
@@ -26,16 +36,6 @@
     "stock": [
       "https://www.todayis20.com/statsbymonth.php?month=Jul-2021",
       "https://microstock.plus/"
-    ]
-  },
-  {
-    "name": "stock",
-    "stock": [
-      "https://www.stocksy.com/cta/welcome#cta",
-      "https://www.westend61.de/",
-      "https://www.gettyimages.com/collaboration/boards/BfpPIYxnBUOQurtdWkBQoA",
-      "https://www.plainpicture.com/en",
-      "https://peopleimages.com/"
     ]
   },
   {
