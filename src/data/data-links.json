@@ -1,0 +1,29 @@
+[
+  {"name": "stock", "link": "https://www.stocksy.com/"},
+  {"name": "stock", "link": "https://www.westend61.de/"},
+  {"name": "stock", "link": "https://www.gettyimages.com/"},
+  {"name": "stock", "link": "https://www.plainpicture.com/"},
+  {"name": "stock", "link": "https://peopleimages.com/"},
+
+  {"name": "main stock", "link": "https://submit.shutterstock.com/ru/dashboard"},
+  {"name": "main stock", "link": "https://accountmanagement.gettyimages.com/Account/Profile"},
+  {"name": "main stock", "link": "https://contributor.stock.adobe.com/ru/portfolio?limit=100&page=1&sort_by=create_desc&err_code=301"},
+  {"name": "main stock", "link": "https://www.cavanimages.com/account/sales"},
+
+  {"name": "stock else", "link": "https://www.dreamstime.com/account/earnings-images"},
+  {"name": "stock else", "link": "https://depositphotos.com/sales.html"},
+  {"name": "stock else", "link": "https://www.bigstockphoto.com/ru/"},
+  {"name": "stock else", "link": "https://ru.123rf.com/contributor/dashboard"},
+  {"name": "stock else", "link": "https://designbundles.net/admin/index.php"},
+  {"name": "stock else", "link": "https://www.alamy.com/myalamy-aim.aspx?login=1"},
+  {"name": "stock else", "link": "https://www.pond5.com/ru/my-recent-sales"},
+  {"name": "stock else", "link": "https://www.crushpixel.com/members/profile_home.php"},
+
+  {"name": "programs", "link": "https://www.todayis20.com/statsbymonth.php?month=Jul-2021"},
+  {"name": "programs", "link": "https://microstock.plus/"},
+
+  {"name": "вдохновение", "link": "https://www.behance.net/gallery/32848647/colourfooddesign?tracking_source=search_projects_recommended%7Cfood"},
+
+  {"name": "no my stock", "link": "https://elements.envato.com/lp/twenty20/"},
+  {"name": "no my stock", "link": "https://videohive.net/user/evakerrigan"}
+]

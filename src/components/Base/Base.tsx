@@ -1,37 +1,52 @@
 import { useEffect, useState } from "react";
 import "./Base.css";
-// import { LinkPreview } from '@dhaiwat10/react-link-preview';
+// import dataLinks from "./data.json";
 
-const API_URL = 'http://localhost:4000/api/preview?url=';
-const previewUrl = [
-  "https://www.stocksy.com/",
-  "https://www.westend61.de/",
-  "https://www.gettyimages.com/",
-  "https://www.plainpicture.com/",
-  "https://peopleimages.com/"
-]
+// const API_URL = 'http://localhost:4000/api/preview?url=';
+// const API_URL = 'http://api-preview.vercel.app/api/preview?url=';
+// const previewUrl = [
+//   "https://www.stocksy.com/",
+//   "https://www.westend61.de/",
+//   "https://www.gettyimages.com/",
+//   "https://www.plainpicture.com/",
+//   "https://peopleimages.com/"
+// ]
 
-type DataType = {
+// type DataType = {
+//   name: string;
+//   stock: string[];
+// }
+// type BaseProps = {
+//   data: DataType[];
+// }
+
+type DataType1 = {
   name: string;
-  stock: string[];
+  link: string;
 }
-type BaseProps = {
-  data: DataType[];
+type BaseProps1 = {
+  data: DataType1[];
 }
 
+//эта функция позволяет получить данные
 const getData = async (url: string) => {
-  const res = await fetch(`${API_URL}` + url);
-  const data = await res.json();
-  return data;
+  const res = await fetch(`${API_URL}` + url); //записываем в переменную ответ от сервера
+  const data = await res.json(); //превращаем ответ в json
+  return data; //возвращаем данные
 }
 
-export const Base = ({ data }: BaseProps): JSX.Element => {
+export const Base = ({ data }: BaseProps1): JSX.Element => {
 
-  const [dataPreviews, setDataPreviews] = useState<any>([]);
+  const dataArray = data.map(item => item.name);
+  console.log('dataArray', dataArray);
+  const uniqueNames = Array.from(new Set(dataArray));
+  console.log('uniqueNames', uniqueNames);
+
+  const [dataPreviews, setDataPreviews] = useState<any>([]); //сюда сохраняем полученные превьюшки
 
   useEffect(() => {
     // getPreviews(previewUrl);
-    mixData();
+    mixData(); //вызываем эту функцию при монтировании компонента
   }, []);
 
   const getPreviews = async (urlArr: string[]) => {
@@ -59,9 +74,36 @@ export const Base = ({ data }: BaseProps): JSX.Element => {
   }
 
   return (
+
     <div className="Base">
+
       <h1>Stock Links</h1>
       {
+        uniqueNames.map(({ title }) => (
+          <>
+            <h2 key="title">{title}</h2>
+            <ul>
+              {
+                data.map(({ name, link }) => (
+                  <>
+                    if(name === title) {
+                      <li key={name}>
+                        <a href={link} target="_blank" rel="noreferrer">{link}</a>
+                      </li>
+                    }
+                  </>
+                ))
+              }
+            </ul>
+          </>
+        ))
+      }
+
+    </div>
+  );
+}
+
+{/* {
         dataPreviews && dataPreviews.map(({ name, stock, previews }) => (
           <div key={name}>
             <h2>{name}</h2>
@@ -73,7 +115,7 @@ export const Base = ({ data }: BaseProps): JSX.Element => {
                       {previews &&
                         <img src={
                           previews[index] ? previews[index] : "https://via.placeholder.com/150"
-                          } alt="" className="preview-image" />}
+                        } alt="" className="preview-image" />}
                     </div>
                     <a href={item} target="_blank" rel="noreferrer">{item}</a>
                   </li>
@@ -82,8 +124,4 @@ export const Base = ({ data }: BaseProps): JSX.Element => {
             </ul>
           </div>
         ))
-      }
-
-    </div>
-  );
-}
+      } */}
